@@ -1,0 +1,234 @@
+CREDITOS DE LAS IMAGENES
+==============================================================
+
+Las fotografias se obtuvieron mediante Openverse (openverse.org),
+el buscador de contenido libre del proyecto WordPress, filtrando
+por licencias CC0 y dominio publico.
+
+Esas licencias NO obligan a dar credito. Se listan de todos modos
+para dejar constancia del origen de cada archivo.
+
+Las imagenes que no aparecen en esta lista son ilustraciones
+vectoriales dibujadas para el proyecto (includes/ilustraciones.php).
+
+--------------------------------------------------------------
+
+productos/pc-nivel1.jpg
+    Titulo   : HP Omen Gaming PC
+    Licencia : CC0
+    Autor    : joncutrer
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/47121680@N00/52544791468
+
+productos/pc-nivel2.jpg
+    Titulo   : Mini ITX universal motherboard plate
+    Licencia : CC0
+    Autor    : Kenneth Munk
+    Fuente   : thingiverse
+    Pagina   : https://www.thingiverse.com/thing:1900578
+
+productos/pc-nivel3.jpg
+    Titulo   : workstation
+    Licencia : PDM
+    Autor    : Damitishardtopickaname
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/35908129@N07/16959763180
+
+productos/monitor.jpg
+    Titulo   : UHD TV as Computer Monitor
+    Licencia : PDM
+    Autor    : josbert.lonnee
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/98552965@N05/24346301003
+
+productos/audifonos.jpg
+    Titulo   : Headphones
+    Licencia : CC0
+    Autor    : pasukaru76
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/38451115@N04/3605234342
+
+productos/silla.jpg
+    Titulo   : Office chairs, patterned fabric, green, blue, Microsoft buil
+    Licencia : CC0
+    Autor    : Wonderlane
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/71401718@N00/8189158766
+
+productos/grafica.jpg
+    Titulo   : Pieces of Nvidia GeForce 4 Ti Graphics Card and MSI K9A2 Neo
+    Licencia : CC0
+    Autor    : qubodup
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/21051491@N02/8278033287
+
+blog/fps.jpg
+    Titulo   : Project 365 #3: 030115 Retro Gaming
+    Licencia : PDM
+    Autor    : comedy_nose
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/23408922@N07/16163748056
+
+blog/linux.jpg
+    Titulo   : My Home Office (2020)
+    Licencia : CC0
+    Autor    : Ted Mielczarek
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/49243838@N00/49517006647
+
+blog/limpieza.jpg
+    Titulo   : 5647641250_7921701006_o
+    Licencia : PDM
+    Autor    : USDAgov
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/41284017@N08/6302972818
+
+blog/armar.jpg
+    Titulo   : computer-motherboard-pc-wires
+    Licencia : CC0
+    Autor    : pixellaphoto
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/137643065@N06/23698613303
+
+carrusel/build.jpg
+    Titulo   : 2007_10_13
+    Licencia : CC0
+    Autor    : Dennis S. Hurd
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/43296902@N00/1563788229
+
+carrusel/taller.jpg
+    Titulo   : Computer repairs at Reading Repair Cafe
+    Licencia : CC0
+    Autor    : karenblakeman
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/11569642@N00/16473176888
+
+carrusel/interior.jpg
+    Titulo   : An open desktop computer case showing internal components, i
+    Licencia : CC0
+    Autor    : Moses Cursor Ssebunya
+    Fuente   : wordpress
+    Pagina   : https://wordpress.org/photos/photo/35667c22e6/
+
+carrusel/entrega.jpg
+    Titulo   : cardboard boxes
+    Licencia : PDM
+    Autor    : courtneywarner
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/143304364@N07/28789355883
+
+galeria/local.jpg
+    Titulo   : Was this computer store once a cinema..., 2017 06 01 -b
+    Licencia : CC0
+    Autor    : booledozer
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/55289779@N00/34232641863
+
+galeria/mesa-armado.jpg
+    Titulo   : THE SHOP
+    Licencia : CC0
+    Autor    : PHOTOSHOP LOGIC
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/52904639@N08/17630933414
+
+galeria/interior.jpg
+    Titulo   : IMac A1173 Motherboard Closeup
+    Licencia : CC0
+    Autor    : Oligopolism
+    Fuente   : wikimedia
+    Pagina   : https://commons.wikimedia.org/w/index.php?curid=99375285
+
+galeria/limpieza.jpg
+    Titulo   : Home Office Toys
+    Licencia : CC0
+    Autor    : cogdogblog
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/37996646802@N01/327260700
+
+galeria/torneo.jpg
+    Titulo   : IMG_4925
+    Licencia : PDM
+    Autor    : VisionGamingCH
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/147573052@N04/34185292113
+
+galeria/entrega.jpg
+    Titulo   : Today's Favorite Color is UPS / B&H Brown!
+    Licencia : CC0
+    Autor    : cogdogblog
+    Fuente   : flickr
+    Pagina   : https://www.flickr.com/photos/37996646802@N01/4267944720
+
+
+SEGUNDA TANDA
+----------------------------------------
+
+productos/pc-nivel2.jpg
+    Titulo   : And Then There Was One (Laptop)
+    Licencia : CC0
+    Autor    : cogdogblog
+    Pagina   : https://www.flickr.com/photos/37996646802@N01/374113131
+
+productos/grafica.jpg
+    Titulo   : Dreamer GPU Upgrade: Spare Parts
+    Licencia : CC0
+    Autor    : deborah.soltesz
+    Pagina   : https://www.flickr.com/photos/10836653@N05/19181909393
+
+blog/fps.jpg
+    Titulo   : Personalize your Gaming Hub with 9 Gaming Desk Decorations -
+    Licencia : PDM
+    Autor    : standingdesktopper.com
+    Pagina   : https://www.flickr.com/photos/187493994@N02/49839713526
+
+blog/limpieza.jpg
+    Titulo   : 5647641250_7921701006_o
+    Licencia : PDM
+    Autor    : USDAgov
+    Pagina   : https://www.flickr.com/photos/41284017@N08/6302972818
+
+galeria/entrega.jpg
+    Titulo   : Project 365 #338: 041209 Hardly Boxing Clever
+    Licencia : PDM
+    Autor    : comedy_nose
+    Pagina   : https://www.flickr.com/photos/23408922@N07/4158168471
+
+galeria/mesa-armado.jpg
+    Titulo   : Reparieren und Basteln
+    Licencia : CC0
+    Autor    : stiefkind
+    Pagina   : https://www.flickr.com/photos/52924836@N00/29983460260
+
+galeria/limpieza.jpg
+    Titulo   : Your Laptop got Stuck in a blue screen loop
+    Licencia : PDM
+    Autor    : cubeydev
+    Pagina   : https://www.flickr.com/photos/194563617@N06/51756658239
+
+
+==============================================================
+IMAGENES GENERADAS CON INTELIGENCIA ARTIFICIAL
+==============================================================
+
+Las siguientes se generaron con Nano Banana (Google Gemini) a partir de
+descripciones escritas por el grupo. Conservan la marca de agua visible
+de Gemini en la esquina inferior derecha.
+
+    carrusel/build.jpg        Manos instalando memoria RAM
+    carrusel/taller.jpg       Mesa de trabajo con herramientas
+    carrusel/interior.jpg     Interior de un gabinete armado
+    carrusel/entrega.jpg      Equipo terminado sobre el escritorio
+    blog/limpieza.jpg         Limpieza con aire comprimido
+    galeria/build-rgb.jpg     Equipo con iluminacion RGB
+    productos/pc-nivel2.jpg   Foto de producto del PC Nivel 2
+
+Se declara su origen de forma expresa. Si la asignatura no admite el uso
+de imagenes generadas, deben reemplazarse por fotografias propias o de
+los bancos libres indicados arriba.
+
+PENDIENTE: galeria/dual-boot.jpg
+El generador produjo un menu de arranque con texto sin sentido
+("Operanut menu", "Rosax stemu"). Los modelos de imagen no saben escribir.
+Se debe reemplazar por una captura real del menu GRUB de la maquina
+virtual del proyecto.

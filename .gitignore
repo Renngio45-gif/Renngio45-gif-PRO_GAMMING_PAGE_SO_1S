@@ -1,0 +1,23 @@
+# Archivos temporales de los editores
+*~
+*.swp
+.vscode/
+.idea/
+
+# Windows y macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Copias de seguridad de Word y Office
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# Registros y volcados
+*.log
+*.sql.bak
+
+# La contrasena real de MySQL no debe subirse al repositorio.
+# Ver includes/config.php: el archivo del repositorio lleva la clave de
+# ejemplo. Si el grupo la cambia en el servidor, NO subir ese cambio.

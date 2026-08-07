@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NivelUp · comparación de paletas</title>
+<style>
+:root{
+  --fondo:#0b1220; --fondo-panel:#121c2e; --fondo-suave:#1a2740;
+  --texto:#e5ecf5; --texto-suave:#93a4bb; --borde:#24344f;
+  --radio:14px; --transicion:.25s ease;
+  --sombra:0 8px 24px rgba(0,0,0,.45);
+}
+/* ---- Las cuatro paletas ---- */
+.p-actual{ --primario:#a78bfa; --acento:#f472b6; }
+.p-cian  { --primario:#a78bfa; --acento:#22d3ee; }
+.p-ambar { --primario:#60a5fa; --acento:#fbbf24; }
+.p-coral { --primario:#818cf8; --acento:#fb7185; }
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fondo);color:var(--texto);
+     font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6;padding:32px}
+h1{font-size:22px;margin-bottom:6px}
+.intro{color:var(--texto-suave);font-size:14px;margin-bottom:32px;max-width:70ch}
+
+.bloque{margin-bottom:40px;padding:26px;border-radius:18px;
+        background:var(--fondo-panel);border:1px solid var(--borde)}
+.cabecera{display:flex;align-items:baseline;gap:14px;margin-bottom:4px}
+.cabecera h2{font-size:17px}
+.muestras{display:flex;gap:6px}
+.muestra{width:26px;height:26px;border-radius:7px;border:1px solid rgba(255,255,255,.14)}
+.desc{color:var(--texto-suave);font-size:13.5px;margin:8px 0 22px;max-width:78ch}
+
+.fila{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:18px}
+
+/* ================= TARJETA PROPUESTA ================= */
+.tarjeta{
+  position:relative;overflow:hidden;
+  background:var(--fondo-panel);border:1px solid var(--borde);
+  border-radius:var(--radio);padding:1.6rem;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color var(--transicion);
+}
+/* foco que sigue al cursor */
+.tarjeta::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),
+             color-mix(in srgb,var(--primario) 14%,transparent),transparent 65%);
+  opacity:0;transition:opacity .3s;
+}
+.tarjeta:hover::before{opacity:1}
+.tarjeta:hover{transform:translateY(-6px);
+  box-shadow:0 0 0 1.5px var(--primario),0 18px 38px -14px rgba(0,0,0,.6);
+  border-color:transparent}
+
+/* icono fantasma de fondo */
+.fantasma{position:absolute;right:-22px;bottom:-26px;width:150px;height:150px;
+  color:var(--primario);opacity:.07;pointer-events:none;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.tarjeta:hover .fantasma{transform:rotate(-8deg) scale(1.12);opacity:.13}
+
+.ic{position:relative;width:52px;height:52px;display:grid;place-items:center;
+  border-radius:12px;margin-bottom:1rem;color:#fff;
+  background:linear-gradient(135deg,var(--primario),var(--acento));
+  transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.tarjeta:hover .ic{transform:translateY(-3px) scale(1.06)}
+.tarjeta h3{position:relative;font-size:1.05rem;margin-bottom:.4rem}
+.tarjeta p{position:relative;color:var(--texto-suave);font-size:.9rem}
+
+/* ================= BOTONES PROPUESTOS ================= */
+.botones{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.boton{position:relative;overflow:hidden;display:inline-block;
+  padding:.75rem 1.6rem;border-radius:999px;border:2px solid transparent;
+  font-weight:600;font-size:.92rem;cursor:pointer;text-decoration:none;
+  transition:transform var(--transicion),box-shadow var(--transicion)}
+.boton--primario{color:#fff;
+  background:linear-gradient(120deg,var(--primario),var(--acento));
+  background-size:180% 100%;background-position:0 0;
+  transition:transform var(--transicion),box-shadow var(--transicion),background-position .5s ease}
+.boton--primario:hover{transform:translateY(-2px);background-position:100% 0;
+  box-shadow:0 10px 24px -8px var(--acento)}
+/* destello que cruza */
+.boton--primario::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.38) 50%,transparent 64%);
+  transform:translateX(-130%);transition:transform .65s ease}
+.boton--primario:hover::after{transform:translateX(130%)}
+
+.boton--contorno{border-color:var(--primario);color:var(--primario);background:transparent}
+.boton--contorno:hover{background:var(--primario);color:#0b1220;transform:translateY(-2px)}
+
+.nota{font-size:12.5px;color:var(--texto-suave);margin-top:14px;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>Cuatro paletas, mismos componentes</h1>
+<p class="intro">
+  Pasa el mouse por las tarjetas y por los botones: el foco de luz sigue al cursor,
+  el icono de fondo gira y el destello cruza el botón. Compara y dime cuál.
+</p>
+
+<!-- ============ plantilla repetida por paleta ============ -->
+<div class="bloque p-actual">
+  <div class="cabecera">
+    <h2>Actual · Violeta y magenta</h2>
+    <div class="muestras"><span class="muestra" style="background:#a78bfa"></span><span class="muestra" style="background:#f472b6"></span></div>
+  </div>
+  <p class="desc">La que tienes. Enérgica y muy «gamer», pero los dos tonos están cerca en el círculo cromático, así que el contraste entre ellos es bajo y el conjunto se aplana.</p>
+  <div class="fila">
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Armado a la medida</h3>
+      <p>Nos dices cuánto tienes y a qué juegas, y armamos el equipo con esas dos cosas en mente.</p>
+    </article>
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg></div>
+      <h3>Instalación del sistema</h3>
+      <p>Windows o Linux, con los controladores al día y las actualizaciones aplicadas.</p>
+    </article>
+  </div>
+  <div class="botones">
+    <a class="boton boton--primario" href="#">Cotiza tu equipo gratis</a>
+    <a class="boton boton--contorno" href="#">Ver los equipos</a>
+  </div>
+</div>
+
+<div class="bloque p-cian">
+  <div class="cabecera">
+    <h2>Opción A · Violeta y cian</h2>
+    <div class="muestras"><span class="muestra" style="background:#a78bfa"></span><span class="muestra" style="background:#22d3ee"></span></div>
+  </div>
+  <p class="desc">Conserva el violeta que ya conoces y cambia el segundo tono por cian eléctrico. Los dos están enfrentados en el círculo cromático, así que el degradado tiene mucho más recorrido y los precios y enlaces saltan a la vista.</p>
+  <div class="fila">
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Armado a la medida</h3>
+      <p>Nos dices cuánto tienes y a qué juegas, y armamos el equipo con esas dos cosas en mente.</p>
+    </article>
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg></div>
+      <h3>Instalación del sistema</h3>
+      <p>Windows o Linux, con los controladores al día y las actualizaciones aplicadas.</p>
+    </article>
+  </div>
+  <div class="botones">
+    <a class="boton boton--primario" href="#">Cotiza tu equipo gratis</a>
+    <a class="boton boton--contorno" href="#">Ver los equipos</a>
+  </div>
+</div>
+
+<div class="bloque p-ambar">
+  <div class="cabecera">
+    <h2>Opción B · Azul eléctrico y ámbar</h2>
+    <div class="muestras"><span class="muestra" style="background:#60a5fa"></span><span class="muestra" style="background:#fbbf24"></span></div>
+  </div>
+  <p class="desc">Complementarios puros: el contraste más alto de las tres. Se siente más técnico y menos «gamer adolescente», que puede jugar a favor si el jurado son profesores. El ámbar sobre fondo oscuro se lee muy bien.</p>
+  <div class="fila">
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Armado a la medida</h3>
+      <p>Nos dices cuánto tienes y a qué juegas, y armamos el equipo con esas dos cosas en mente.</p>
+    </article>
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg></div>
+      <h3>Instalación del sistema</h3>
+      <p>Windows o Linux, con los controladores al día y las actualizaciones aplicadas.</p>
+    </article>
+  </div>
+  <div class="botones">
+    <a class="boton boton--primario" href="#">Cotiza tu equipo gratis</a>
+    <a class="boton boton--contorno" href="#">Ver los equipos</a>
+  </div>
+</div>
+
+<div class="bloque p-coral">
+  <div class="cabecera">
+    <h2>Opción C · Índigo y coral</h2>
+    <div class="muestras"><span class="muestra" style="background:#818cf8"></span><span class="muestra" style="background:#fb7185"></span></div>
+  </div>
+  <p class="desc">La más suave de las tres. El coral es cálido y humano, y baja el tono agresivo sin perder energía. Combina mejor con las fotos que ya tienes, que son de luz violeta. Menos «llamativa», más cuidada.</p>
+  <div class="fila">
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>Armado a la medida</h3>
+      <p>Nos dices cuánto tienes y a qué juegas, y armamos el equipo con esas dos cosas en mente.</p>
+    </article>
+    <article class="tarjeta">
+      <svg class="fantasma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8m0 0 3-3m-3 3L9 7"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01M10 18h.01"/></svg></div>
+      <h3>Instalación del sistema</h3>
+      <p>Windows o Linux, con los controladores al día y las actualizaciones aplicadas.</p>
+    </article>
+  </div>
+  <div class="botones">
+    <a class="boton boton--primario" href="#">Cotiza tu equipo gratis</a>
+    <a class="boton boton--contorno" href="#">Ver los equipos</a>
+  </div>
+  <p class="nota">Los efectos son idénticos en las cuatro: lo único que cambia es el segundo color.</p>
+</div>
+
+<script>
+// Foco de luz que sigue al cursor dentro de cada tarjeta
+document.querySelectorAll('.tarjeta').forEach(function (t) {
+  t.addEventListener('mousemove', function (e) {
+    var r = t.getBoundingClientRect();
+    t.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    t.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+});
+</script>
+</body>
+</html>

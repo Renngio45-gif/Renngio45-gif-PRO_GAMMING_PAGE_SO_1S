@@ -1,0 +1,57 @@
+CARPETA DE IMAGENES
+===================
+
+El sitio funciona sin estas imagenes: donde falta un archivo se muestra un
+marcador con degradado e icono. Reemplacenlos por fotografias reales antes
+de la entrega, respetando exactamente estos nombres y subcarpetas.
+
+img/
+  carrusel/
+      build.jpg            (1600x700 aprox.)
+      taller.jpg
+      interior.jpg
+      entrega.jpg
+  productos/
+      pc-nivel1.jpg        (800x500 aprox.)
+      pc-nivel2.jpg
+      pc-nivel3.jpg
+      monitor.jpg
+      teclado.jpg
+      audifonos.jpg
+      silla.jpg
+      grafica.jpg
+  blog/
+      fps.jpg              (1200x675 aprox.)
+      ssd.jpg
+      linux.jpg
+      limpieza.jpg
+      armar.jpg
+  galeria/
+      local.jpg            (1200x900 aprox.)
+      mesa-armado.jpg
+      build-rgb.jpg
+      interior.jpg
+      limpieza.jpg
+      dual-boot.jpg
+      torneo.jpg
+      entrega.jpg
+      armado.mp4           (video del armado paso a paso)
+
+SUGERENCIAS
+-----------
+- El video armado.mp4 pueden grabarlo ustedes mismos con el celular: abrir
+  un computador, limpiarlo o cambiarle una pieza. Cumple el requisito de
+  "videos relacionados con el proyecto" y no hace falta que sea largo; con
+  uno o dos minutos basta.
+- Si alguien del grupo tiene un PC de escritorio, las fotos del interior,
+  del cableado y del arranque dual las pueden tomar en casa. Salen mejor
+  que cualquier imagen de banco y no cuestan nada.
+- Bancos de imagenes gratuitos y sin atribucion obligatoria: Unsplash,
+  Pexels, Pixabay. Buscar en ingles: "gaming pc", "pc build", "mechanical
+  keyboard", "computer repair", "gaming setup".
+- Comprimir todo antes de subirlo (tinypng.com o similar). Una pagina que
+  tarda en cargar baja la nota en "experiencia de usuario".
+- Si cambian los nombres de archivo, actualizarlos tambien en:
+    * base-datos/esquema.sql   (columnas imagen de productos y publicaciones)
+    * sitio/includes/funciones.php  (funcion galeria)
+    * sitio/index.php          (arreglo $laminas del carrusel)
